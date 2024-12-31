@@ -12,21 +12,21 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python 3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
     - partialjson
   requires:
-    - python 3.6
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
