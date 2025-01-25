@@ -1,5 +1,5 @@
 {% set name = "partialjson" %}
-{% set version = "0.0.8" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 91217e19a15049332df534477f56420065ad1729cedee7d8c7433e1d2acc7dca
+  sha256: 0af7035ed8d0194691d9e015302a462f61a732271e927d81a5a0971ee2fe38fd
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -42,4 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - raybellwaves
-  
+
